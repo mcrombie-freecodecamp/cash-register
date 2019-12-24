@@ -1,83 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Cash Register</title>
 
-    </head>
-    <body>
-        <main>
-            <h1 id="title">
-                Cash Register
-            </h1>
-            <div id="price-container">
-                Price
-                <input type="number" id="price-input">
+<head>
+    <meta charset="utf-8">
+    <title>Cash Register</title>
+    <link href="../../../css/all-pages.css" rel="stylesheet">
+    <style>
+        #main-content{
+            margin-top:15vh;
+            height:85vh;
+        }
+        #title {
+            text-align: center;
+            font-size: 5rem;
+            margin: 2rem;
+        }
+
+        /* TRANSACTIONS ON LEFT */
+
+        #transaction-container {
+            float: left;
+            margin-left: 20%;
+            background-color: rgb(135, 135, 240);
+        }
+
+        #transaction-title,
+        #register-title {
+            font-size: 3.5rem;
+
+        }
+
+        #input-container,
+        #output-container {
+            margin: 3rem;
+            font-size: 1.7rem;
+        }
+
+        /* REGISTER ON RIGHT */
+        #register-container {
+            float: right;
+            margin-right: 30%;
+            font-size: 1.7rem;
+            background-color: rgb(45, 182, 45);
+        }
+
+        .register-money {
+            margin: .5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navigation">
+            <div class="navigation__back">
+                &nbsp;
             </div>
-            <div id="cash-container">
-                Cash
-                <input type="text" id="cash-input">
+            <a href="../../../../" id="page-title" class="navigation__title">
+                CromBlog
+            </a>
+            <input type="checkbox" class="navigation__checkbox" id="navigation-toggle">
+
+            <label for="navigation-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <div class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="../../../about/" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="../../../blog/" class="navigation__link">Blog</a></li>
+                    <li class="navigation__item"><a href="../../../contact/" class="navigation__link">Contact</a></li>
+                    <li class="navigation__item"><a href="../../../web-development-portfolio/"
+                            class="navigation__link">Web
+                            Development Portfolio</a></li>
+                    <li class="navigation__item"><a href="../../../writing-portfolio/" class="navigation__link">Writing
+                            Portfolio</a></li>
+                </ul>
             </div>
-            <div id="register-container">
-                <div id="penny-container">
-                    Pennies: 
+        </div>
+    </header>
+    <main id="main-content">
+        <h1 id="title">
+            Cash Register
+        </h1>
+        <div id="transaction-container">
+            <h2 id="transaction-title">
+                Transaction
+            </h2>
+            <div id="input-container">
+                <div id="price-container">
+                    Price
+                    <input type="number" id="price-input" value=0>
+                </div>
+                <div id="cash-container">
+                    Cash
+                    <input type="number" id="cash-input" value=0>
+                </div>
+                <button id="submit-button">Enter</button>
+            </div>
+            <div id="output-container">
+                <h3 id="register-status-title">
+                    Register Status:
+                </h3>
+                <div id="register-status">
+
+                </div>
+                <h3 id="change-title">
+                    Change:
+                </h3>
+                <div id="change">
+
+                </div>
+            </div>
+        </div>
+        <div id="register-container">
+            <h2 id="register-title">
+                Register
+            </h2>
+            <div id="register-money-container">
+                <div class="register-money" id="penny-container">
+                    Pennies:
                     <div id="pennies-value">
-                        
+
                     </div>
                 </div>
-                <div id="nickel-container">
-                    Nickels: 
+                <div class="register-money" id="nickel-container">
+                    Nickels:
                     <div id="nickels-value">
 
                     </div>
                 </div>
-                <div id="dime-container">
-                    Dimes: 
+                <div class="register-money" id="dime-container">
+                    Dimes:
                     <div id="dimes-value">
 
                     </div>
                 </div>
-                <div id="quarter-container">
-                    Quarters: 
+                <div class="register-money" id="quarter-container">
+                    Quarters:
                     <div id="quarters-value">
 
                     </div>
                 </div>
-                <div id="one-container">
-                    Ones: 
+                <div class="register-money" id="one-container">
+                    Ones:
                     <div id="ones-value">
 
                     </div>
                 </div>
-                <div id="five-container">
-                    Fives: 
+                <div class="register-money" id="five-container">
+                    Fives:
                     <div id="fives-value">
 
                     </div>
                 </div>
-                <div id="ten-container">
-                    Tens: 
+                <div class="register-money" id="ten-container">
+                    Tens:
                     <div id="tens-value">
 
                     </div>
                 </div>
-                <div id="twenty-container">
-                    Twenties: 
+                <div class="register-money" id="twenty-container">
+                    Twenties:
                     <div id="twenties-value">
 
                     </div>
                 </div>
-                <div id="hundred-container">
-                    Hundreds: 
+                <div class="register-money" id="hundred-container">
+                    Hundreds:
                     <div id="hundreds-value">
 
                     </div>
                 </div>
             </div>
-            
 
-        </main>
+        </div>
 
-    </body>
-    <script src="js/script.js"></script>
+
+    </main>
+
+</body>
+<script src="js/script2.js"></script>
+
 </html>
